@@ -1,0 +1,30 @@
+{
+ "definitions": [
+  {
+   "type": "dns",
+
+   "description": "Test TCP",
+   "target": "8.8.8.8",
+   "query_class": "IN",
+   "query_type": "A",
+   "query_argument": "facebook.com",
+
+   "protocol": "TCP",
+   "set_rd_bit": true,
+   "set_nsid_bit": false,
+   "set_do_bit": false,
+   "set_cd_bit": false,
+   "udp_payload_size": 512,
+   "prepend_probe_id": false,
+
+   "af": 4,
+   "qbuf": false,
+   "include_abuf": true,
+   "use_probe_resolver": false,
+   "resolve_on_probe": false,
+   "is_public": true,
+   "retry": 0
+  }
+ ],
+ "is_oneoff": true
+}
