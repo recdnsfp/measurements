@@ -5,8 +5,8 @@
    "af": 4,
    "query_class": "IN",
    "query_type": "A",
-   "query_argument": "www.dnssec-failed.org",
-   "description": "[DNS hackathon] DNS censorship - DNSSEC failes",
+   "query_argument": "dnssec-failed.org",
+   "description": "DNSSEC failed",
    "do": false,
    "recursion_desired": true,
    "use_probe_resolver": false,
@@ -20,13 +20,6 @@
    "use_NSID": false,
    "is_public": false,
    "type": "dns"
-  }
- ],
- "probes": [
-  {
-   "type": "probes",
-   "value": "<probes_ids_here>",
-   "requested":0
   }
  ],
  "is_oneoff": true

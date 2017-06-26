@@ -1,0 +1,17 @@
+{
+ "definitions": [
+  {
+   "type": "ping",
+
+   "description": "Test ping",
+   "af": 4,
+   "target": "8.8.8.8",
+   "resolve_on_probe": false,
+   "skip_dns_check": true,
+
+   "packets": 3,
+   "size": 48
+  }
+ ],
+ "is_oneoff": true
+}

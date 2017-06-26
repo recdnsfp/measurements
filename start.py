@@ -13,7 +13,6 @@ import pycurl
 import json
 import time
 import argparse
-import random
 
 ATLAS_URL = 'https://atlas.ripe.net/api/v2/measurements/?key=%s'
 
@@ -28,9 +27,10 @@ def main():
 	prs.add_argument('--pbs', help='path to probe status file \
 	(eg. from http://ftp.ripe.net/ripe/atlas/probes/archive/2017/04/20170419.json.bz2)', required=True)
 	prs.add_argument('--out', help='path for results: the measurement ids', required=True)
-	prs.add_argument('-n', type=int, default=0, help='how many probes to use')
+	prs.add_argument('--min', type=int, default=0, help='min probe id')
+	prs.add_argument('--max', type=int, default=0, help='max probe id')
 	prs.add_argument('--step', type=int, default=1000, help='max probe count per step')
-	prs.add_argument('--sleep', type=int, default=0, help='time to sleep between steps')
+	prs.add_argument('--sleep', type=int, default=30, help='time to sleep between steps')
 	prs.add_argument('--verbose', action='store_true', help='be verbose')
 	prs.add_argument('-k', action='store_true', help='dry-run mode - skip any network requests')
 	args = prs.parse_args()
@@ -40,10 +40,9 @@ def main():
 
 	# read the probes
 	probes_data = json.loads(open(args.pbs).read())
-	alive_probes = [p["id"] for p in probes_data['objects'] if p["status"] == 1]
-	random.shuffle(alive_probes)
-	if args.n > 0:
-		alive_probes = alive_probes[0:args.n]
+	alive_probes = sorted([p["id"] for p in probes_data['objects'] if p["status"] == 1])
+	if args.min > 0: alive_probes = [pid for pid in alive_probes if pid >= args.min]
+	if args.max > 0: alive_probes = [pid for pid in alive_probes if pid <= args.max]
 
 	# put measurement ids here
 	m_ids = []
@@ -58,7 +57,7 @@ def main():
 			time.sleep(args.sleep)
 
 		pids = alive_probes[i:i + args.step]
-		print "Starting on probes %d till %d" % (i+1, i + len(pids))
+		print "Starting on probes %d till %d" % (min(pids), max(pids))
 
 		# update the template
 		tpl["probes"] = [{
@@ -90,13 +89,16 @@ def main():
 
 			# ok?
 			if rjson.has_key("error"):
-				print "Error, retrying in 1 minute..."
+				try:
+					print "Error, retrying in 1 minute... (%s)" % (rjson["error"]["errors"][0]["detail"])
+				except:
+					print "Error, retrying in 1 minute..."
+					print json.dumps(rjson["error"])
+
 				time.sleep(60) # retry in 1 minute
 			else:
-				m_ids.extend(rjson['measurements']) # store measurement ids
+				m_ids.extend(rjson['measurements'])          # store measurement ids
+				open(args.out, 'w').write(json.dumps(m_ids)) # update the output file
 				break
-
-	# write results
-	open(args.out, 'w').write(json.dumps(m_ids))
 
 if __name__ == "__main__": main()

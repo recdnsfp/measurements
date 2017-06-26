@@ -1,33 +1,20 @@
 {
  "definitions": [
   {
-   "af": 4,
-   "target": "<target_dns_server>",
-   "description": "Traceroute measurement to 8.8.8.8",
-
    "type": "traceroute",
-   "destination_option_size": null,
-   "dont_fragment": null,
-   "duplicate_timeout": null,
+
+   "af": 4,
+   "target": "8.8.8.8",
+   "description": "Test traceroute",
    "first_hop": 1,
-   "hop_by_hop_option_size": null,
    "max_hops": 32,
    "packets": 3,
    "paris": 16,
-   "port": 80,
    "protocol": "ICMP",
    "resolve_on_probe": false,
+   "skip_dns_check": true,
    "response_timeout": 4000,
-   "size": 48,
-   "spread": null,
-   "target_asn": null
-  }
- ],
- "probes": [
-  {
-   "type": "probes",
-   "value": "<probes_ids_here>",
-   "requested":0
+   "size": 48
   }
  ],
  "is_oneoff": true

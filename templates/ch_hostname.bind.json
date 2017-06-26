@@ -1,0 +1,30 @@
+{
+ "definitions": [
+  {
+   "type": "dns",
+
+   "description": "Test hostname.bind",
+   "target": "8.8.8.8",
+   "af": 4,
+   "query_class": "CHAOS",
+   "query_type": "TXT",
+   "query_argument": "hostname.bind",
+
+   "use_probe_resolver": false,
+   "qbuf": false,
+   "include_abuf": true,
+   "set_rd_bit": true,
+   "resolve_on_probe": false,
+   "is_public": true,
+   "retry": 0,
+   "prepend_probe_id": false,
+
+   "set_do_bit": false,
+   "set_cd_bit": false,
+   "set_nsid_bit": false,
+   "protocol": "UDP",
+   "udp_payload_size": 512
+  }
+ ],
+ "is_oneoff": true
+}

@@ -1,0 +1,30 @@
+{
+ "definitions": [
+  {
+   "type": "dns",
+
+   "description": "Test v6",
+   "af": 4,
+   "target": "8.8.8.8",
+   "query_class": "IN",
+   "query_type": "AAAA",
+   "query_argument": "ds.v6ns.test-ipv6.ams.vr.org",
+
+   "use_probe_resolver": false,
+   "qbuf": false,
+   "include_abuf": true,
+   "set_rd_bit": true,
+   "resolve_on_probe": false,
+   "is_public": true,
+   "retry": 0,
+   "prepend_probe_id": false,
+
+   "set_do_bit": false,
+   "set_cd_bit": false,
+   "set_nsid_bit": false,
+   "protocol": "UDP",
+   "udp_payload_size": 512
+  }
+ ],
+ "is_oneoff": true
+}
