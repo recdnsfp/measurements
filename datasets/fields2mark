@@ -1,0 +1,12 @@
+ipv6_rcode
+ipv6_rdata
+qname_ok
+tcp_rcode
+hostname_rcode
+version_rcode
+serverid_rcode
+dsfail_rcode
+nxd_rcode
+nxd_rdata
+whoami_net
+whoami2_net
