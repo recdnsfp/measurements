@@ -1,0 +1,30 @@
+{
+ "definitions": [
+  {
+   "type": "dns",
+
+   "description": "test.ipv4.google-pdns-info.andzinski.pl.",
+   "target": "208.67.222.222",
+   "query_class": "IN",
+   "query_type": "TXT",
+   "query_argument": "test.ipv4.google-pdns-info.andzinski.pl.",
+
+   "protocol": "UDP",
+   "set_rd_bit": true,
+   "set_nsid_bit": false,
+   "set_do_bit": false,
+   "set_cd_bit": false,
+   "udp_payload_size": 512,
+   "prepend_probe_id": false,
+
+   "af": 4,
+   "qbuf": false,
+   "include_abuf": true,
+   "use_probe_resolver": false,
+   "resolve_on_probe": false,
+   "is_public": true,
+   "retry": 0
+  }
+ ],
+ "is_oneoff": true
+}
