@@ -1,0 +1,43 @@
+@relation df_google_marked
+@attribute field {'dnskey_acount','dnskey_arcount','dnskey_flags','dnskey_nscount','dnskey_qcount','dnskey_rcode','dnskey_size','dsfail_flags','dsfail_rcode','dsfail_rdata','dsfail_size','hostname_flags','hostname_rcode','hostname_resp','hostname_size','ipv6_flags','ipv6_rcode','ipv6_rdata','ipv6_size','nxd_asn','nxd_flags','nxd_name','nxd_rcode','nxd_rdata','qname_ok','qname_size','serverid_flags','serverid_rcode','serverid_resp','serverid_size','version_flags','version_rcode','version_resp','version_size','whoami2_asn','whoami2_net','whoami_asn','whoami_net'}
+@attribute n numeric
+@attribute fraction numeric
+@data
+'dnskey_acount',34,0.0147377546597313
+'dnskey_arcount',35,0.0151712180320763
+'dnskey_flags',67,0.0290420459471175
+'dnskey_nscount',4,0.00173385348938015
+'dnskey_qcount',2,0.000866926744690074
+'dnskey_rcode',7,0.00303424360641526
+'dnskey_size',41,0.0177719982661465
+'dsfail_flags',101,0.0437798006068487
+'dsfail_rcode',98,0.0424794104898136
+'dsfail_rdata',20,0.00866926744690074
+'dsfail_size',88,0.0381447767663632
+'hostname_flags',108,0.046814044213264
+'hostname_rcode',108,0.046814044213264
+'hostname_resp',43,0.0186389250108366
+'hostname_size',76,0.0329432162982228
+'ipv6_flags',54,0.023407022106632
+'ipv6_rcode',45,0.0195058517555267
+'ipv6_rdata',56,0.0242739488513221
+'ipv6_size',81,0.035110533159948
+'nxd_asn',11,0.00476809709579541
+'nxd_flags',19,0.0082358040745557
+'nxd_name',11,0.00476809709579541
+'nxd_rcode',16,0.00693541395752059
+'nxd_rdata',11,0.00476809709579541
+'qname_ok',36,0.0156046814044213
+'qname_size',53,0.022973558734287
+'serverid_flags',109,0.047247507585609
+'serverid_rcode',109,0.047247507585609
+'serverid_resp',17,0.00736887732986563
+'serverid_size',101,0.0437798006068487
+'version_flags',111,0.0481144343302991
+'version_rcode',111,0.0481144343302991
+'version_resp',56,0.0242739488513221
+'version_size',90,0.0390117035110533
+'whoami2_asn',91,0.0394451668833984
+'whoami2_net',91,0.0394451668833984
+'whoami_asn',98,0.0424794104898136
+'whoami_net',98,0.0424794104898136

@@ -1,0 +1,38 @@
+@relation df_opendns_marked
+@attribute field {'dnskey_acount','dnskey_arcount','dnskey_flags','dnskey_nscount','dnskey_qcount','dnskey_rcode','hostname_flags','hostname_rcode','hostname_resp','hostname_size','ipv6_flags','ipv6_rcode','ipv6_rdata','ipv6_size','nxd_asn','nxd_flags','nxd_name','nxd_rcode','nxd_rdata','qname_ok','qname_size','serverid_flags','serverid_rcode','serverid_resp','serverid_size','version_flags','version_rcode','version_resp','version_size','whoami2_asn','whoami2_net','whoami_asn','whoami_net'}
+@attribute n numeric
+@attribute fraction numeric
+@data
+'dnskey_acount',57,0.0410958904109589
+'dnskey_arcount',48,0.0346070656092285
+'dnskey_flags',40,0.0288392213410238
+'dnskey_nscount',6,0.00432588320115357
+'dnskey_qcount',1,0.000720980533525595
+'dnskey_rcode',4,0.00288392213410238
+'hostname_flags',65,0.0468637346791637
+'hostname_rcode',64,0.0461427541456381
+'hostname_resp',22,0.0158615717375631
+'hostname_size',52,0.0374909877433309
+'ipv6_flags',41,0.0295602018745494
+'ipv6_rcode',33,0.0237923576063446
+'ipv6_rdata',44,0.0317231434751262
+'ipv6_size',55,0.0396539293439077
+'nxd_asn',9,0.00648882480173035
+'nxd_flags',15,0.0108147080028839
+'nxd_name',9,0.00648882480173035
+'nxd_rcode',10,0.00720980533525595
+'nxd_rdata',9,0.00648882480173035
+'qname_ok',21,0.0151405912040375
+'qname_size',37,0.026676279740447
+'serverid_flags',69,0.049747656813266
+'serverid_rcode',68,0.0490266762797404
+'serverid_resp',17,0.0122566690699351
+'serverid_size',72,0.0519105984138428
+'version_flags',71,0.0511896178803172
+'version_rcode',70,0.0504686373467916
+'version_resp',36,0.0259552992069214
+'version_size',66,0.0475847152126893
+'whoami2_asn',66,0.0475847152126893
+'whoami2_net',66,0.0475847152126893
+'whoami_asn',72,0.0519105984138428
+'whoami_net',72,0.0519105984138428
